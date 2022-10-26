@@ -79,7 +79,7 @@
                                 <td><img src="{{ asset('storage/'.$o->image) }}" alt="" srcset="" width="50"></td>
                                 <td>{{ $o->nama_produk }}</td>
                                 <td>{{ $o->qty }}</td>
-                                <td>{{ $o->qty * $o->price }}</td>
+                                <td>Rp. {{ number_format($o->qty * $o->price,2,',','.') }}</td>
                             </tr>
                             @endforeach
                         </tbody>

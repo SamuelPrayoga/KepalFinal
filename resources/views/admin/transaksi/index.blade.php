@@ -42,7 +42,7 @@
                                 <td align="center"></td>
                                 <td>{{ $order->invoice }}</td>
                                 <td>{{ $order->nama_pemesan }}</td>
-                                <td>{{ $order->subtotal + $order->biaya_cod }}</td>
+                                <td>Rp. {{ number_format($order->subtotal + $order->biaya_cod,2,',','.') }}</td>
                                 <td>{{ $order->metode_pembayaran }}</td>
                                 <td>{{ $order->name }}</td>
                                 <td align="center">
@@ -62,5 +62,5 @@
               </div>
             </div>
           </div>
-          
+
 @endsection

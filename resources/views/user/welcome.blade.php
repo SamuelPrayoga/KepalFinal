@@ -69,7 +69,7 @@
                 </a>
                 <div class="block-4-text p-4">
                 <h3><a href="{{ route('user.produk.detail',['id' =>  $produk->id]) }}">{{ $produk->name }}</a></h3>
-                <p class="mb-0">{{ $produk->price }}</p>
+                <p class="mb-0">Rp. {{ number_format($produk->price,2,',','.') }}</p>
                 <a href="{{ route('user.produk.detail',['id' =>  $produk->id]) }}" class="btn btn-primary mt-2">Detail</a>
                 </div>
             </div>

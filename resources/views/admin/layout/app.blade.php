@@ -16,7 +16,7 @@
 		<!-- Layout styles -->
 		<link rel="stylesheet" href="{{ asset('adminassets') }}/assets/css/style.css">
 		<link href="{{ asset('swal/dist/sweetalert2.min.css') }}" rel="stylesheet">
-		<link rel="favicon" href="{{ asset('adminassets') }}/assets/images/logokepal.png" />
+		<link rel="shortcut icon" href="{{ asset('adminassets') }}/assets/images/logokepal.png" />
 		<link href="{{ asset('table/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
 		<script src="https://cdn.tailwindcss.com"></script>
@@ -26,8 +26,8 @@
 			<!-- partial:partials/_navbar.html -->
 			<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
 				<div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-					<a class="navbar-brand brand-logo" href="#"><img src="{{ asset('adminassets') }}/assets/images/logo.svg" alt="logo" /></a>
-					<a class="navbar-brand brand-logo-mini" href="#"><img src="{{ asset('adminassets') }}/assets/images/logo-mini.svg" alt="logo" /></a>
+					<a class="navbar-brand brand-logo" href="#">GO-LAPAK</a>
+					<a class="navbar-brand brand-logo-mini" href="#"><img src="{{ asset('adminassets') }}/assets/images/logokepal.png" alt="logo" /></a>
 				</div>
 				<div class="navbar-menu-wrapper d-flex align-items-stretch">
 					<button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -77,10 +77,10 @@
 									<!--change to offline or busy as needed-->
 								</div>
 								<div class="nav-profile-text d-flex flex-column">
+                                    <i class="mdi mdi-bookmark-check text-danger nav-profile-badge"></i>
 									<span class="font-weight-bold mb-2">{{ Auth::user()->name }}</span>
-									<span class="text-primary text-small">Admin</span>
+									<span class="text-secondary text-small">Admin</span>
 								</div>
-								<i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
 							</a>
 						</li>
 						<li class="nav-item {{ Request::path() === 'admin' ? 'active' : '' }}">
@@ -113,12 +113,42 @@
 								<i class="mdi mdi-arrow-down menu-icon"></i>
 							</a>
 						</li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.transaksi') }}"><i class="mdi mdi-comment"></i> &nbsp; Pesanan Baru</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.transaksi.perludicek') }}"><i class="mdi mdi-check"></i>&nbsp;  Perlu Di Cek</a></li>
-						<li class="nav-item"> <a class="nav-link" href="{{ route('admin.transaksi.perludikirim') }}"><i class="mdi mdi-check-all"></i>&nbsp;  Perlu Di Kirim</a></li>
-						<li class="nav-item"> <a class="nav-link" href="{{ route('admin.transaksi.dikirim') }}"><i class="mdi mdi-truck"></i>&nbsp;  Barang Di Kirim</a></li>
-						<li class="nav-item"> <a class="nav-link" href="{{ route('admin.transaksi.selesai') }}"><i class="mdi mdi-briefcase-check"></i>&nbsp; Selesai</a></li>
-						<li class="nav-item"> <a class="nav-link" href="{{ route('admin.transaksi.dibatalkan') }}"><i class="mdi mdi-block-helper"></i>&nbsp;  Dibatalkan</a></li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{{ route('admin.transaksi') }}">
+                                <i class="mdi mdi-comment"></i> &nbsp;
+								<span class="menu-title">Pesanan Baru</span>
+							</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{{ route('admin.transaksi.perludicek') }}">
+                                <i class="mdi mdi-check"></i> &nbsp;
+								<span class="menu-title">Perlu Di Cek</span>
+							</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{{ route('admin.transaksi.perludikirim') }}">
+                                <i class="mdi mdi-check-all"></i> &nbsp;
+								<span class="menu-title">Perlu Di Kirim</span>
+							</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{{ route('admin.transaksi.dikirim') }}">
+                                <i class="mdi mdi-truck"></i> &nbsp;
+								<span class="menu-title">Barang Di Kirim</span>
+							</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{{ route('admin.transaksi.selesai') }}">
+                                <i class="mdi mdi-briefcase-check"></i> &nbsp;
+								<span class="menu-title">Transaksi Selesai</span>
+							</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{{ route('admin.transaksi.dibatalkan') }}">
+                                <i class="mdi mdi-block-helper"></i> &nbsp;
+								<span class="menu-title">Dibatalkan</span>
+							</a>
+						</li>
 
 						<li class="nav-item ">
 							<a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic2">
@@ -126,8 +156,18 @@
 								<i class="mdi mdi-arrow-down menu-icon"></i>
 							</a>
 						</li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.pengaturan.alamat') }}"><i class="mdi mdi-book-variant"></i>&nbsp;  Alamat</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('admin.rekening') }}"><i class="mdi mdi-barcode"></i>&nbsp;  No Rekening</a></li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{{ route('admin.pengaturan.alamat') }}">
+                                <i class="mdi mdi-book-variant"></i> &nbsp;
+								<span class="menu-title">Alamat Toko</span>
+							</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{{ route('admin.pengaturan.alamat') }}">
+                                <i class="mdi mdi-barcode"></i> &nbsp;
+								<span class="menu-title">No Rekening</span>
+							</a>
+						</li>
 					</ul>
 				</nav>
 				<!-- partial -->
@@ -137,8 +177,10 @@
 					<!-- partial:partials/_footer.html -->
 					<footer class="footer">
 						<div class="d-sm-flex justify-content-center justify-content-sm-between">
-							<span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2017 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved.</span>
-							<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+							<span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <script>
+                                document.write(new Date().getFullYear())
+                            </script> <a href="#" target="_blank">GO-LAPAK</a>. All rights reserved.</span>
+							<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Made with <i class="mdi mdi-heart text-danger"></i></span>
 						</div>
 					</footer>
 					<!-- partial -->

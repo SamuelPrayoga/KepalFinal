@@ -3,7 +3,7 @@
 <div class="bg-light py-3">
     <div class="container">
     <div class="row">
-        <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Shop</strong></div>
+        <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Product</strong></div>
     </div>
     </div>
 </div>
@@ -51,13 +51,13 @@
                 </a>
                 <div class="block-4-text p-4">
                 <h3><a href="{{ route('user.produk.detail',['id' =>  $produk->id]) }}">{{ $produk->name }}</a></h3>
-                <p class="mb-0">RP {{ $produk->price }}</p>
+                <p class="mb-0">Rp. {{ number_format($produk->price,2,',','.') }}</p>
                 <a href="{{ route('user.produk.detail',['id' =>  $produk->id]) }}" class="btn btn-primary mt-2">Detail</a>
                 </div>
             </div>
             </div>
             @endforeach
-            
+
 
         </div>
         <div class="row" data-aos="fade-up">
@@ -119,7 +119,7 @@
         </div> -->
         </div>
     </div>
-    
+
     </div>
 </div>
 @endsection

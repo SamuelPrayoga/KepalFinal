@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('shopper') }}/css/jquery-ui.css">
     <link rel="stylesheet" href="{{ asset('shopper') }}/css/owl.carousel.min.css">
     <link rel="stylesheet" href="{{ asset('shopper') }}/css/owl.theme.default.min.css">
-    <link rel="favicon" href="{{ asset('adminassets') }}/assets/images/logokepal.png" />
+    <link rel="shortcut icon" href="{{ asset('adminassets') }}/assets/images/logokepal.png" />
 
 
     <link rel="stylesheet" href="{{ asset('shopper') }}/css/aos.css">
@@ -39,7 +39,7 @@
 
             <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
               <div class="site-logo">
-                <a href="index.html" class="js-logo-clone">GO-LAPAK</a>
+                <a href="/" class="js-logo-clone">GO-LAPAK</a>
               </div>
             </div>
 
@@ -191,7 +191,7 @@
           <div class="col-md-12">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank" class="text-primary">PROYEK KEPAL</a>
+            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank" class="text-primary">PROYEK KEPAL</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
