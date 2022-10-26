@@ -40,7 +40,7 @@ class UserController extends Controller
         if($user==null){
             return redirect()->back();
         }else{
-            $user->token_activation = Str::random(6);
+            $user->token_activation = random_int(100000, 999999);
             $user->save();
             event(new UserActivationEmail($user));
 

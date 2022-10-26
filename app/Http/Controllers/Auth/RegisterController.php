@@ -73,13 +73,18 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'role' => 'customer',
             'password' => Hash::make($data['password']),
-            'token_activation' => Str::random(6),
+            'token_activation' => random_int(100000, 999999),
             'isVerified' => false,
 
             //add salt in password
 
         ]);
+
+        //$randomNumber = random_int(100000, 999999);
+        //Str::random(6),
     }
+
+
 
     /**
      * The user has been registered.
