@@ -3,7 +3,7 @@
 <div class="bg-light py-3">
     <div class="container">
     <div class="row">
-        <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Cart</strong></div>
+        <div class="col-md-12 mb-0"><a href="/">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Pesanan Anda</strong></div>
     </div>
     </div>
 </div>
@@ -12,7 +12,7 @@
     <div class="container">
     <div class="row mb-3">
         <div class="col-md-12 text-center">
-            <h2 class="display-5">Detail Pesanan Anda</h2>
+            <h2 class="display-5">Detail Pesanan Anda: </h2>
         </div>
     </div>
     <div class="row">
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-md-4 text-right">
                     @if($order->status_order_id == 4)
-                    <a href="{{ route('user.order.pesananditerima',['id' => $order->id]) }}" onclik="return confirm('Yakin ingin melanjutkan ?')" class="btn btn-primary">Pesanan Di Terima</a><br>
+                    <a href="{{ route('user.order.pesananditerima',['id' => $order->id]) }}" onclik="return confirm('Yakin ingin melanjutkan ?')" class="btn btn-danger">Pesanan Di Terima</a><br>
                     <small>Jika pesanan belum datang harap jangan tekan tombol ini</small>
                     @endif
                 </div>
@@ -84,6 +84,7 @@
                             @endforeach
                         </tbody>
                         </table>
+                        <small>Terimakasih Telah melakukan pemesanan produk kami, Selamat Berbelanja Kembali</small>
 
                 </div>
                 </div>

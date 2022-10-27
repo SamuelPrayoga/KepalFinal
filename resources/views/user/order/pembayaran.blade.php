@@ -3,7 +3,7 @@
 <div class="bg-light py-3">
     <div class="container">
     <div class="row">
-        <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Cart</strong></div>
+        <div class="col-md-12 mb-0"><a href="/">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Pembayaran</strong></div>
     </div>
     </div>
 </div>
@@ -12,7 +12,7 @@
     <div class="container">
     <div class="row mb-3">
         <div class="col-md-12 text-center">
-            <h2 class="display-5">Silahkan Lakukan Pembayaran Lewat No Rekening Berikut</h2>
+            <h2 class="display-5">Silahkan Lakukan Pembayaran melalui No Rekening Berikut:</h2>
         </div>
     </div>
     <div class="row">
@@ -44,8 +44,8 @@
                         <form action="{{ route('user.order.kirimbukti',['id' => $order->id ]) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                             <div class="form-group">
-                            <label for="">Upload Bukti Pembayaran</label>
-                            <input type="file" name="bukti_pembayaran" id="" class="form-control" required>
+                            <label for="">Unggah Bukti Pembayaran</label>
+                            <input type="file" name="bukti_pembayaran" id="" class="form-control" required> <a>File dalam format: jpg, png, jpeg</a>
                             </div>
                             <div class="text-right">
                             <button type="submit" class="btn btn-primary">Kirim</button>
@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-    
+
 
     </div>
 </div>

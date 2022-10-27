@@ -171,8 +171,8 @@
               <h3 class="footer-heading mb-4">Contact Info</h3>
               <ul class="list-unstyled">
                 <li class="address">Keamanan Perangkat Lunak</li>
-                <li class="phone"><a href="tel://23923929210">+62 822 7209 3950</a></li>
-                <li class="email">samueltampubolon202@gmail.com</li>
+                <li class="phone"><a href="tel://082272093950">+62 822 7209 3950</a></li>
+                <li class="email">samueltampubolon2002@gmail.com</li>
               </ul>
             </div>
 

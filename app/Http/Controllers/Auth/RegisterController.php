@@ -9,6 +9,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Helpers\HashSalt;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
@@ -57,6 +58,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+
         ]);
     }
 
@@ -73,16 +75,21 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'role' => 'customer',
             'password' => Hash::make($data['password']),
+            //'password' => HashSalt::hash_salt($data['password']),
             'token_activation' => random_int(100000, 999999),
+            //'salt'=>'nullable',
             'isVerified' => false,
 
             //add salt in password
 
         ]);
-
+        //$validateData['password'] = HashSalt::hash_salt($validateData['password']);
+        //$validateData['password'].$validateData['salt'];
         //$randomNumber = random_int(100000, 999999);
         //Str::random(6),
     }
+
+
 
 
 

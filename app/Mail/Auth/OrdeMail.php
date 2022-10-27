@@ -1,27 +1,26 @@
 <?php
 
-namespace App\Mail;
+namespace App\Mail\Auth;
 
-use App\Order;
+use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use App\Listeners\Auth\SendActivationEmail;
 
 class OrdeMail extends Mailable
 {
     use Queueable, SerializesModels;
-
-    public Order $order;
-
+    public $orderdetails;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($order)
+    public function __construct(User $user)
     {
-        $this->order = $order;
+        $this->user = $user;
     }
 
     /**
@@ -31,6 +30,6 @@ class OrdeMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Order Confirmation')->view('mails.order-mail');
+        return $this->markdown('emails.auth.activation');
     }
 }

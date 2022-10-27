@@ -163,7 +163,7 @@
 							</a>
 						</li>
                         <li class="nav-item">
-							<a class="nav-link" href="{{ route('admin.pengaturan.alamat') }}">
+							<a class="nav-link" href="{{ route('admin.rekening') }}">
                                 <i class="mdi mdi-barcode"></i> &nbsp;
 								<span class="menu-title">No Rekening</span>
 							</a>
