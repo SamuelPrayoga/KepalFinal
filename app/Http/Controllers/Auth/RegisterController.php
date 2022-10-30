@@ -70,11 +70,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $salt = "a1Bz20ydqelm8m1wql";
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'role' => 'customer',
+            //'password' => hash('sha256','password'),
             'password' => Hash::make($data['password']),
+            //'password' => Hash::make(hash('sha256', $salt.$data['password'])),
             //'password' => HashSalt::hash_salt($data['password']),
             'token_activation' => random_int(100000, 999999),
             //'salt'=>'nullable',
@@ -87,6 +90,7 @@ class RegisterController extends Controller
         //$validateData['password'].$validateData['salt'];
         //$randomNumber = random_int(100000, 999999);
         //Str::random(6),
+        //$password = HashSalt::hash_salt($password['password']);
     }
 
 

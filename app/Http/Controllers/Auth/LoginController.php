@@ -7,6 +7,8 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Hash;
+use Validator;
 use App\Listeners\Auth\SendActivationEmail;
 
 class LoginController extends Controller
@@ -55,6 +57,8 @@ class LoginController extends Controller
 
     protected function validateLogin(Request $request)
     {
+        //$salt = "a1Bz20ydqelm8m1wql";
+        //$input = $request->all();
         $request->validate([
             $this->username() => [
                 'required', 'string',
@@ -63,6 +67,9 @@ class LoginController extends Controller
                 })
             ],
             'password' => 'required|string',
+            //'password' => hash('sha256','password'),
+            //'password' => Hash::make($request->password),
+            //'password' => Hash::make(hash('sha256','password')),
         ], [
             $this->username(). '.exist' => 'Email Anda Belum Aktif, Silahkan Aktivasi Terlebih dahulu'
         ]);

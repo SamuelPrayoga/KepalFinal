@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2022 at 03:04 AM
+-- Generation Time: Oct 29, 2022 at 04:30 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -44,7 +44,16 @@ INSERT INTO `alamat` (`id`, `cities_id`, `detail`, `user_id`, `created_at`, `upd
 (1, 481, 'IT Del', 2, '2022-10-21 18:55:51', '2022-10-21 18:55:51'),
 (2, 481, 'Institut Teknologi Del, Laguboti', 1, '2022-10-24 18:40:02', '2022-10-24 18:40:02'),
 (3, 382, 'PT ASTRA', 2, '2022-10-24 19:04:48', '2022-10-24 19:04:48'),
-(4, 481, 'Institut Teknologi Del, Laguboti', 3, '2022-10-25 00:09:47', '2022-10-25 00:09:47');
+(4, 481, 'Institut Teknologi Del, Laguboti', 3, '2022-10-25 00:09:47', '2022-10-25 00:09:47'),
+(5, 481, 'Institut Teknologi Del, Laguboti', 4, '2022-10-25 19:02:36', '2022-10-25 19:02:36'),
+(6, 155, 'Kotabaru', 4, '2022-10-25 19:14:49', '2022-10-25 19:14:49'),
+(7, 481, 'Institut Teknologi Del, Laguboti', 6, '2022-10-26 07:13:23', '2022-10-26 07:13:23'),
+(8, 484, 'Kampus Institut Teknologi Del', 11, '2022-10-26 20:44:23', '2022-10-26 20:44:23'),
+(9, 88, 'Bone Bolango', 13, '2022-10-26 21:39:51', '2022-10-26 21:39:51'),
+(10, 467, 'Tarakan', 15, '2022-10-26 23:05:34', '2022-10-26 23:05:34'),
+(11, 326, 'palangkaraya', 16, '2022-10-26 23:13:13', '2022-10-26 23:13:13'),
+(12, 460, 'Tanjung Jabung Barat', 20, '2022-10-27 02:34:54', '2022-10-27 02:34:54'),
+(13, 124, 'Kotamobagu', 23, '2022-10-28 07:11:52', '2022-10-28 07:11:52');
 
 -- --------------------------------------------------------
 
@@ -87,7 +96,8 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Laptop', '2022-10-21 18:44:00', '2022-10-21 18:44:00'),
 (2, 'MacBook', '2022-10-21 18:44:17', '2022-10-21 18:44:17'),
-(3, 'Android', '2022-10-21 18:44:43', '2022-10-21 18:44:43');
+(3, 'Android', '2022-10-21 18:44:43', '2022-10-21 18:44:43'),
+(4, 'IPhone', '2022-10-25 18:07:44', '2022-10-25 18:07:44');
 
 -- --------------------------------------------------------
 
@@ -663,7 +673,19 @@ INSERT INTO `detail_order` (`id`, `order_id`, `product_id`, `qty`, `created_at`,
 (7, 6, 2, 2, '2022-10-25 00:30:26', '2022-10-25 00:30:26'),
 (8, 6, 1, 3, '2022-10-25 00:30:26', '2022-10-25 00:30:26'),
 (9, 7, 1, 1, '2022-10-25 01:35:10', '2022-10-25 01:35:10'),
-(10, 8, 2, 3, '2022-10-25 07:04:24', '2022-10-25 07:04:24');
+(10, 8, 2, 3, '2022-10-25 07:04:24', '2022-10-25 07:04:24'),
+(11, 9, 3, 1, '2022-10-25 18:46:23', '2022-10-25 18:46:23'),
+(12, 10, 2, 1, '2022-10-25 19:03:14', '2022-10-25 19:03:14'),
+(13, 10, 3, 1, '2022-10-25 19:03:14', '2022-10-25 19:03:14'),
+(14, 10, 1, 1, '2022-10-25 19:03:14', '2022-10-25 19:03:14'),
+(15, 11, 3, 2, '2022-10-25 19:23:18', '2022-10-25 19:23:18'),
+(16, 12, 2, 1, '2022-10-26 07:13:40', '2022-10-26 07:13:40'),
+(17, 13, 3, 2, '2022-10-26 20:44:55', '2022-10-26 20:44:55'),
+(18, 14, 3, 1, '2022-10-26 23:05:56', '2022-10-26 23:05:56'),
+(19, 15, 4, 1, '2022-10-26 23:13:35', '2022-10-26 23:13:35'),
+(20, 16, 1, 2, '2022-10-26 23:25:55', '2022-10-26 23:25:55'),
+(21, 17, 4, 1, '2022-10-27 02:35:10', '2022-10-27 02:35:10'),
+(22, 18, 3, 1, '2022-10-28 07:12:09', '2022-10-28 07:12:09');
 
 -- --------------------------------------------------------
 
@@ -700,7 +722,8 @@ CREATE TABLE `keranjang` (
 --
 
 INSERT INTO `keranjang` (`id`, `user_id`, `products_id`, `qty`, `created_at`, `updated_at`) VALUES
-(9, 1, 1, 1, '2022-10-24 23:43:12', '2022-10-24 23:43:12');
+(9, 1, 1, 1, '2022-10-24 23:43:12', '2022-10-24 23:43:12'),
+(22, 13, 3, 1, '2022-10-26 21:40:06', '2022-10-26 21:40:06');
 
 -- --------------------------------------------------------
 
@@ -772,10 +795,19 @@ INSERT INTO `order` (`id`, `invoice`, `user_id`, `subtotal`, `no_resi`, `status_
 (2, 'ITDEL202210230217', 2, 42030000, NULL, 2, 'trf', 30000, '2022-10-23 07:17:24', '2022-10-23 07:17:42', 0, '082272093950', 'buktibayar/Gtw6K6k9JwsBo3gceO2XI9Y7V7aK5EPCRXWWdXQq.jpg', 'Makasih'),
 (3, 'ITDEL202210250140', 1, 14030000, NULL, 6, 'trf', 30000, '2022-10-24 18:40:18', '2022-10-24 18:43:26', 0, '082272093950', NULL, 'Kirim'),
 (4, 'ITDEL_INV202210250142', 1, 14030000, NULL, 6, 'trf', 30000, '2022-10-24 18:43:03', '2022-10-24 18:43:23', 0, '082272093950', NULL, 'Cepat'),
-(5, 'ITDEL_INV202210250147', 1, 14030000, NULL, 3, 'cod', 30000, '2022-10-24 18:47:37', '2022-10-25 07:05:39', 10000, '082272093950', 'buktibayar/xTdQKN8TLQRGnXSxDn4t4Ta462vTpsAPXBhxqi1A.txt', 'Cepat'),
-(6, 'ITDEL_INV202210250726', 3, 92150000, '144557778869912', 4, 'trf', 150000, '2022-10-25 00:30:26', '2022-10-25 00:35:10', 0, '082272093950', 'buktibayar/Y4CJuBxfs1b3sfGK5grJVeXeJIHGMxXOzZRDqZ0J.webp', 'Harap dikirimkan'),
-(7, 'ITDEL_INV202210250835', 3, 14030000, NULL, 3, 'trf', 30000, '2022-10-25 01:35:10', '2022-10-25 07:05:19', 0, '082272093950', 'buktibayar/okBCcG9RwrW7wFaWRx2NQdyIR7Hr04sFDk7jlGQo.png', 'Secepatnya'),
-(8, 'ITDEL_INV202210250204', 3, 33180000, NULL, 2, 'trf', 180000, '2022-10-25 07:04:24', '2022-10-25 07:04:53', 0, '082272093950', 'buktibayar/gKGRtwT6Or7lm6hvzzhCYDDyNL1tW9rkyW4QJdCJ.jpg', 'WKWKWK');
+(6, 'ITDEL_INV202210250726', 3, 92150000, '144557778869912', 5, 'trf', 150000, '2022-10-25 00:30:26', '2022-10-25 18:54:00', 0, '082272093950', 'buktibayar/Y4CJuBxfs1b3sfGK5grJVeXeJIHGMxXOzZRDqZ0J.webp', 'Harap dikirimkan'),
+(7, 'ITDEL_INV202210250835', 3, 14030000, 'A1234556668', 5, 'trf', 30000, '2022-10-25 01:35:10', '2022-10-25 18:54:03', 0, '082272093950', 'buktibayar/okBCcG9RwrW7wFaWRx2NQdyIR7Hr04sFDk7jlGQo.png', 'Secepatnya'),
+(8, 'ITDEL_INV202210250204', 3, 33180000, 'A1234556667', 5, 'trf', 180000, '2022-10-25 07:04:24', '2022-10-25 18:54:06', 0, '082272093950', 'buktibayar/gKGRtwT6Or7lm6hvzzhCYDDyNL1tW9rkyW4QJdCJ.jpg', 'WKWKWK'),
+(9, 'ITDEL-INV202210260145', 3, 33030000, 'A1234556669', 5, 'trf', 30000, '2022-10-25 18:46:23', '2022-10-25 18:58:48', 0, '082272093950', 'buktibayar/7X3GHNj02dP5e93qkc62eEaK3hRwY4lc5EmkqjJX.png', 'Jangan dititipkan kepada satpam, agar tidak dibongkar'),
+(10, 'ITDEL-INV202210260202', 4, 58090000, 'A1122299800', 5, 'trf', 90000, '2022-10-25 19:03:14', '2022-10-25 19:06:27', 0, '082272093950', 'buktibayar/lau2qM0gUxrnJOyzSnpw4FAkC18truXf06zwB0kF.png', 'Kirimkan secepatnya'),
+(11, 'ITDEL-INV202210260223', 4, 66030000, 'A11222998001', 5, 'trf', 30000, '2022-10-25 19:23:18', '2022-10-25 19:24:27', 0, '082272093950', 'buktibayar/MX955Uw8g0SrMJ8qV2yjgl7h0IdBEwBJCU68ScLB.jpg', 'Secepatnya'),
+(12, 'ITDEL-INV202210260213', 6, 11060000, '144557778869917', 5, 'trf', 60000, '2022-10-26 07:13:40', '2022-10-26 07:16:08', 0, '082272093950', 'buktibayar/eO1wtRzK8MTZXoqpOK20FqH8covO1lHoKORvkq2b.jpg', 'aaa'),
+(13, 'ITDEL-INV202210270344', 11, 66149000, '144557778869912', 5, 'trf', 149000, '2022-10-26 20:44:55', '2022-10-26 20:51:52', 0, '082272093950', 'buktibayar/EgjlFegZ5ZwSsk9bMGZAB409ym2h2ca53tyVI9nD.jpg', 'Kirim secepatnya pada waktu yang telah ditentukan'),
+(14, 'ITDEL-INV202210270605', 15, 33090000, NULL, 1, 'trf', 90000, '2022-10-26 23:05:56', '2022-10-26 23:05:56', 0, '082272093950', NULL, 'Seperti lucu ya Bun'),
+(15, 'ITDEL-INV202210270613', 16, 22059000, NULL, 2, 'cod', 60000, '2022-10-26 23:13:35', '2022-10-26 23:14:10', 10000, '082272093950', 'buktibayar/dLevhhphfvDdKxZKnIz50p6R18OxYZuM2lG2wuH5.png', 'ghadaksd'),
+(16, 'ITDEL-INV202210270625', 16, 28060000, NULL, 1, 'trf', 60000, '2022-10-26 23:25:55', '2022-10-26 23:25:55', 0, '082272093950', NULL, 'Wooooooooooooooooooow'),
+(17, 'ITDEL-INV202210270935', 20, 22062000, 'JNAP-0061460488', 5, 'trf', 63000, '2022-10-27 02:35:10', '2022-10-27 02:38:44', 0, '082272093950', 'buktibayar/uqI3YF4UQM28tTZ0ocky2BUUcDPOs6Ax0qczeTuM.jpg', 'WKWKWKWKWKWK'),
+(18, 'ITDEL-INV202210280212', 23, 33161000, 'JNE1234556669', 4, 'trf', 161000, '2022-10-28 07:12:09', '2022-10-28 07:15:39', 0, '082272093950', 'buktibayar/uBoUXkHnLPTGqXrl5iTarbSIOd8Od1ChOKYX37M3.jpg', 'wdasdad');
 
 -- --------------------------------------------------------
 
@@ -794,8 +826,8 @@ CREATE TABLE `password_resets` (
 --
 
 INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
-('samueltampubolon2002@gmail.com', '$2y$10$VSmcoTDqlwMx0lQanuPxH.OBAxr/7MIotm5WYgtMBuOrl7qSwrqJq', '2022-10-24 06:50:53'),
-('if420029@students.del.ac.id', '$2y$10$pb2ANzkJahHUYmPdwgRIUeySIWTIXSt0p7cSTIg0cAVukkGFUKRTG', '2022-10-24 18:54:41');
+('if420029@students.del.ac.id', '$2y$10$pb2ANzkJahHUYmPdwgRIUeySIWTIXSt0p7cSTIg0cAVukkGFUKRTG', '2022-10-24 18:54:41'),
+('samueltampubolon2002@gmail.com', '$2y$10$WkvPJRZfKQEYhfyjzrVzcuxorSa7FPfKRMZxksZeQXHTDEQajx84C', '2022-10-26 00:13:00');
 
 -- --------------------------------------------------------
 
@@ -823,7 +855,8 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `name`, `description`, `image`, `price`, `weigth`, `categories_id`, `created_at`, `updated_at`, `stok`) VALUES
 (1, 'Asus TUF A15', 'Murah Meriah', 'imageproduct/BZiqG7uAHabm6Oze44VqTSKm9Z3fVtb3tVBBtJ4P.webp', 14000000, 70, 1, '2022-10-21 18:46:19', '2022-10-21 18:46:19', 5),
 (2, 'HP Pavilion', 'AMD Ryzen™ 5 processor,Windows 10 Home Single Language 64,,NVIDIA® GeForce® GTX 1650 (4 GB GDDR6 dedicated),512 GB PCIe® NVMe™ M.2 SSD,16 GB DDR4-3200 MHz RAM (2 x 8 GB),Starting at 1.98 kg', 'imageproduct/GpSJe3ZhPQZ5i1UDc2GHZQmmibBFkCTcVkI8UMBZ.webp', 11000000, 1980, 1, '2022-10-24 07:02:50', '2022-10-24 07:02:50', 4),
-(3, 'MacBook Air', 'GPU di M1 menghadirkan grafis terintegrasi secepat kilat. Jadi, Anda dapat membuat, mengedit, dan memutar beberapa aliran video 4K kualitas penuh tanpa menurunkan satu frame pun.', 'imageproduct/PiGvr8EVWvNiIlfdPCkoqAlGRqa07vJcA6fPbCSP.png', 33000000, 500, 2, '2022-10-25 07:27:45', '2022-10-25 07:27:45', 4);
+(3, 'MacBook Air', 'GPU di M1 menghadirkan grafis terintegrasi secepat kilat. Jadi, Anda dapat membuat, mengedit, dan memutar beberapa aliran video 4K kualitas penuh tanpa menurunkan satu frame pun.', 'imageproduct/PiGvr8EVWvNiIlfdPCkoqAlGRqa07vJcA6fPbCSP.png', 33000000, 500, 2, '2022-10-25 07:27:45', '2022-10-25 07:27:45', 4),
+(4, 'iPhone 14 Pro Max', 'Layar Super Retina XDR 6,7 inci yang Selalu Aktif dan dilengkapi ProMotion\r\nDynamic Island, cara baru yang istimewa untuk berinteraksi dengan iPhone\r\nKamera utama 48 MP untuk resolusi hingga 4x lebih besar\r\nMode Sinematik kini dalam Dolby Vision 4K pada kecepatan hingga 30 fps\r\nMode Aksi untuk video handheld yang stabil\r\nTeknologi keselamatan penting—Deteksi Tabrakan,1 memanggil bantuan saat Anda tak bisa\r\nKekuatan baterai sepanjang hari dan pemutaran video hingga 29 jam\r\nA16 Bionic, chip ponsel pintar paling maksimal. Seluler 5G super cepat\r\nFitur ketahanan terdepan di industri dengan Ceramic Shield dan tahan air\r\niOS 16 menawarkan semakin banyak cara untuk personalisasi, komunikasi, dan berbagi', 'imageproduct/TS6Hi59riP65o6nhRkYQ6w99VP41coG9Vie0a5ef.jpg', 21999000, 670, 4, '2022-10-25 18:37:00', '2022-10-26 23:53:10', 1);
 
 -- --------------------------------------------------------
 
@@ -899,7 +932,7 @@ CREATE TABLE `rekening` (
 --
 
 INSERT INTO `rekening` (`id`, `bank_name`, `atas_nama`, `no_rekening`, `created_at`, `updated_at`) VALUES
-(1, 'BRI', 'SAMUEL TAMPUBOLON', '123123', NULL, NULL),
+(1, 'BRI', 'SAMUEL TAMPUBOLON', '11420876389062', NULL, '2022-10-26 20:51:04'),
 (2, 'DANA', 'SAMUEL TAMPUBOLON', '082272093950', '2022-10-24 07:33:39', '2022-10-24 07:33:39'),
 (3, 'MANDIRI', 'SAMUEL TAMPUBOLON', '0812690320932838', '2022-10-24 07:33:53', '2022-10-24 07:33:53'),
 (4, 'GOPAY', 'SAMUEL TAMPUBOLON', '082272093950', '2022-10-24 07:34:14', '2022-10-24 07:34:14');
@@ -955,7 +988,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `remember_token`, `isVerified`, `token_activation`, `created_at`, `updated_at`) VALUES
 (1, 'Samuel Prayoga Tampubolon', 'if420029@students.del.ac.id', NULL, '$2y$10$jPPITc5aA1K/MrJ7h8zdMO7/yBoc8jUWiNxMB/UlRJcC.Kt6f.Y0S', 'admin', NULL, 1, NULL, '2022-10-24 18:44:10', '2022-10-24 18:45:29'),
-(3, 'Samuel Prayoga Tampubolon', 'samueltampubolon2002@gmail.com', NULL, '$2y$10$QEORH0FIzWrpgOfXGhgDb.kc3AUzW.LJKKB1qHeUJCfY/.BEWze86', 'customer', NULL, 1, NULL, '2022-10-25 00:04:35', '2022-10-25 00:09:04');
+(6, 'Samuel Prayoga Tampubolon', 'if420087@students.del.ac.id', NULL, '$2y$10$vUtXK.x/uZUYP63CEx8eXODrD1XRYmSxwgHhfVbPwpzAeNDiUchW.', 'customer', NULL, 1, NULL, '2022-10-26 07:11:00', '2022-10-26 07:12:37'),
+(7, 'Wordyka', 'wordyka.nainggolan2016@gmail.com', NULL, '$2y$10$6ZYBSl3bFAX.PIcFWfieieVpR2DxGRG9pGu8ThSWZdkVSbBp7lBzK', 'customer', NULL, 1, NULL, '2022-10-26 18:21:05', '2022-10-26 18:21:39'),
+(8, 'Nivshea Estetica', 'nivsheae95@gmail.com', NULL, '$2y$10$4AIjrSjlKgblB/I70ig0AeWl3foNvEC5vqJ2Pbfm07uKE20sMBEVS', 'customer', NULL, 0, '988626', '2022-10-26 20:34:35', '2022-10-26 20:34:35'),
+(28, 'Joko Anwar', 'samueltampubolon2002@gmail.com', NULL, '$2y$10$PBRItLW4icga8QZrRD/g.uyU1l1kig1u.dW3kP2SfLW8/cuWlo4Fm', 'customer', NULL, 1, NULL, '2022-10-29 07:12:55', '2022-10-29 07:13:10');
 
 --
 -- Indexes for dumped tables
@@ -1066,7 +1102,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `alamat`
 --
 ALTER TABLE `alamat`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `alamat_toko`
@@ -1078,7 +1114,7 @@ ALTER TABLE `alamat_toko`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cities`
@@ -1096,7 +1132,7 @@ ALTER TABLE `couriers`
 -- AUTO_INCREMENT for table `detail_order`
 --
 ALTER TABLE `detail_order`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1108,7 +1144,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1120,13 +1156,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `provinces`
@@ -1150,7 +1186,7 @@ ALTER TABLE `status_order`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
